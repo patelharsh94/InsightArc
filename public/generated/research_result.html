@@ -1,474 +1,306 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Best Portfolio for Stock Market Investment — Evidence-Based Guide</title>
-
-  <!-- Tailwind CDN for styling -->
+  <title>Bitcoin 6-Month Outlook — In-Depth Report</title>
+  <meta name="description" content="Comprehensive 6-month outlook for Bitcoin covering historical patterns, macro drivers, network developments and investor sentiment.">
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Basic meta -->
-  <meta name="description" content="Comprehensive guide: best portfolios for stock market investment, asset allocation strategies, diversification, portfolio construction methods, and performance comparison with implementation examples." />
+  <style>
+    /* Minor additional polishing beyond Tailwind utility classes */
+    .chart-card { min-height: 180px; }
+    .badge { font-variant: all-small-caps; }
+    /* Make SVGs responsive */
+    .svg-responsive { width: 100%; height: auto; display: block; }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased leading-relaxed">
-
-  <header class="bg-gradient-to-r from-sky-600 to-indigo-600 text-white">
-    <div class="container mx-auto px-6 py-8">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center gap-4">
-          <!-- Badge / Logo -->
-          <div class="p-2 bg-white/10 rounded-md">
-            <svg class="w-10 h-10 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect x="1" y="4" width="22" height="16" rx="4" stroke="currentColor" stroke-width="1.2" opacity="0.9"/>
-              <path d="M4 18L8 10L12 14L16 8L20 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
+<body class="bg-gray-50 text-slate-800 antialiased">
+  <main class="min-h-screen flex flex-col items-center py-8 px-4">
+    <article class="w-full max-w-6xl">
+      <!-- Header -->
+      <header class="bg-gradient-to-r from-indigo-600 via-violet-600 to-pink-500 rounded-lg p-6 shadow-lg text-white mb-6">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
-            <h1 class="text-2xl font-bold leading-tight">Best Portfolio for Stock Market Investment</h1>
-            <p class="text-sm opacity-90 mt-0.5">Evidence-based portfolio design, risk management & comparison of model portfolios</p>
+            <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">Bitcoin — 6 Month Performance Outlook</h1>
+            <p class="mt-1 text-indigo-100/90 max-w-2xl">A practical, multi-dimensional review synthesizing historical patterns, macro-financial influences, network & technology developments, and investor-driven dynamics.</p>
+          </div>
+          <div class="flex gap-3 items-center">
+            <div class="bg-white/10 px-3 py-2 rounded-lg text-sm text-white badge">Report — Snapshot</div>
+            <div class="text-sm text-white/90">Updated: based on sources up to mid-2024</div>
           </div>
         </div>
+      </header>
 
-        <div class="text-right">
-          <span class="inline-flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full text-sm">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Updated: 2026
-          </span>
+      <!-- Quick Summary -->
+      <section class="mb-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-white p-5 rounded-lg shadow-sm">
+          <h3 class="text-lg font-semibold mb-2">Top-line Outlook</h3>
+          <p class="text-sm text-slate-700">Bitcoin’s short-to-medium term performance will be shaped by (1) macro policy (rates & liquidity), (2) institutional flows and ETF activity, (3) on-chain fundamentals and miner dynamics post-halving, and (4) retail & sentiment-driven flows. Expect elevated volatility — directional bias will depend on macro liquidity & institutional demand.</p>
         </div>
-      </div>
-    </div>
-  </header>
 
-  <main class="container mx-auto px-6 py-8">
-    <!-- Executive summary -->
-    <section class="mb-8">
-      <div class="bg-white shadow rounded-lg p-6">
-        <h2 class="text-xl font-semibold mb-3">Executive summary</h2>
-        <p class="text-gray-700">There is no single "best" portfolio that fits every investor. The optimal stock-market portfolio depends on your objectives, time horizon, risk tolerance, and constraints (tax, liquidity, behavioral). Evidence and large-scale research (e.g., asset-allocation insights from major institutions) show that: diversification across asset classes, disciplined allocation to core market-cap exposures, low-cost implementation (index ETFs/funds), and a plan aligned to risk tolerance consistently produce better long-term outcomes.</p>
-
-        <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="bg-sky-50 p-4 rounded-lg">
-            <h3 class="text-sm font-semibold text-sky-700">Core concept</h3>
-            <p class="text-sm">Start with a clear mix of equities, bonds, and alternatives tailored to risk tolerance.</p>
-          </div>
-          <div class="bg-indigo-50 p-4 rounded-lg">
-            <h3 class="text-sm font-semibold text-indigo-700">Diversify</h3>
-            <p class="text-sm">Spread exposure across regions, sectors, and factors to reduce idiosyncratic risk.</p>
-          </div>
-          <div class="bg-emerald-50 p-4 rounded-lg">
-            <h3 class="text-sm font-semibold text-emerald-700">Control costs & behavior</h3>
-            <p class="text-sm">Minimize fees, rebalance regularly, and avoid market-timing.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      <!-- Left column: contextual & definitions -->
-      <section class="lg:col-span-2 space-y-6">
-        <!-- How "best" is defined -->
-        <article class="bg-white shadow rounded-lg p-6">
-          <h2 class="text-lg font-semibold mb-2">How we define "best"</h2>
-          <p class="text-gray-700 mb-3">"Best" is multi-dimensional. Typical investor objectives include maximizing risk-adjusted return, preserving capital, achieving specific cash-flow targets, and minimizing taxes. Practically, evaluate portfolios using metrics such as expected return, volatility, Sharpe ratio, maximum drawdown, and after-tax real return.</p>
-
-          <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
-            <li class="p-3 bg-gray-50 rounded">
-              <strong>Risk tolerance:</strong> How much drawdown you can tolerate (e.g., conservative vs aggressive).
-            </li>
-            <li class="p-3 bg-gray-50 rounded">
-              <strong>Time horizon:</strong> Longer horizons permit higher equity allocations.
-            </li>
-            <li class="p-3 bg-gray-50 rounded">
-              <strong>Liquidity & constraints:</strong> Needed liquidity, tax sensitivity, or regulatory constraints.
-            </li>
-            <li class="p-3 bg-gray-50 rounded">
-              <strong>Behavioral fit:</strong> A portfolio is only effective if you can stick with it through market cycles.
-            </li>
+        <div class="bg-white p-5 rounded-lg shadow-sm">
+          <h3 class="text-lg font-semibold mb-2">Risks</h3>
+          <ul class="text-sm text-slate-700 list-disc pl-5 space-y-1">
+            <li>Rapid tightening or risk-off shocks reducing liquidity</li>
+            <li>Negative regulatory actions or enforcement headlines</li>
+            <li>Large derivative liquidations or concentrated whale exits</li>
           </ul>
-        </article>
+        </div>
 
-        <!-- Topic 1: Asset allocation strategies -->
-        <article class="bg-white shadow rounded-lg p-6">
-          <h2 class="text-lg font-semibold mb-3">1) Asset allocation strategies</h2>
-          <p class="text-gray-700 mb-3">Asset allocation determines long-term outcomes more than short-term security selection. Common approaches:</p>
+        <div class="bg-white p-5 rounded-lg shadow-sm">
+          <h3 class="text-lg font-semibold mb-2">Bull Catalysts</h3>
+          <ul class="text-sm text-slate-700 list-disc pl-5 space-y-1">
+            <li>Continued institutional inflows / ETF demand</li>
+            <li>Stable or easing macro conditions (lower yields)</li>
+            <li>Improving on-chain supply metrics (exchange outflows)</li>
+          </ul>
+        </div>
+      </section>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Detailed Sections -->
+      <section class="space-y-6">
+        <!-- Historical Patterns -->
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <header class="flex items-start justify-between mb-4">
             <div>
-              <h3 class="font-semibold mb-2">Popular allocation types</h3>
-              <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                <li>Core-satellite (low-cost core + active satellites)</li>
-                <li>Strategic asset allocation (long-term target percentages)</li>
-                <li>Tactical allocation (short-term deviations for opportunity)</li>
-                <li>Target-date or glidepath funds (age-based shifting)</li>
-              </ul>
+              <h2 class="text-2xl font-semibold">1) Historical Price Patterns & Volatility</h2>
+              <p class="text-sm text-slate-600 mt-1">Seasonality, post-halving dynamics, and volatility regimes provide context but are not deterministic.</p>
             </div>
+            <div class="text-sm text-slate-500">Sources: CoinDesk · TradingView · Glassnode</div>
+          </header>
 
-            <div>
-              <h3 class="font-semibold mb-2">Example profiles (illustrative)</h3>
-
-              <!-- Pie charts (SVG) for different profiles -->
-              <div class="grid grid-cols-2 gap-3">
-                <!-- Conservative -->
-                <div class="p-3 bg-gray-50 rounded">
-                  <div class="flex items-center justify-between mb-2">
-                    <strong class="text-sm">Conservative</strong>
-                    <span class="text-xs text-gray-500">Low volatility</span>
-                  </div>
-                  <svg viewBox="0 0 32 32" class="w-full h-24">
-                    <!-- background circle -->
-                    <circle cx="16" cy="16" r="12" fill="#f1f5f9"/>
-                    <!-- bonds slice ~65% -->
-                    <path d="M16 4
-                             A12 12 0 0 1 5.7 9.9
-                             L16 16 Z" fill="#60a5fa"/>
-                    <!-- equities slice ~35% -->
-                    <path d="M5.7 9.9
-                             A12 12 0 0 1 16 4
-                             L16 16 Z" fill="#2563eb"/>
-                    <text x="16" y="28" text-anchor="middle" class="text-xs fill-gray-700 font-sans" font-size="2.3">35% Equity</text>
-                  </svg>
-                </div>
-
-                <!-- Growth -->
-                <div class="p-3 bg-gray-50 rounded">
-                  <div class="flex items-center justify-between mb-2">
-                    <strong class="text-sm">Growth</strong>
-                    <span class="text-xs text-gray-500">Higher long-run return</span>
-                  </div>
-                  <svg viewBox="0 0 32 32" class="w-full h-24">
-                    <circle cx="16" cy="16" r="12" fill="#f8fafc"/>
-                    <!-- equities 80% -->
-                    <path d="M16 4
-                             A12 12 0 0 1 28.5 15.1
-                             L16 16 Z" fill="#34d399"/>
-                    <!-- bonds 20% -->
-                    <path d="M28.5 15.1
-                             A12 12 0 0 1 16 4
-                             L16 16 Z" fill="#059669"/>
-                    <text x="16" y="28" text-anchor="middle" class="text-xs fill-gray-700" font-size="2.3">80% Equity</text>
-                  </svg>
-                </div>
-              </div>
-
-              <p class="text-xs text-gray-500 mt-2">Charts are illustrative; real allocations should reflect investor profile.</p>
-            </div>
-          </div>
-
-          <p class="text-sm text-gray-600 mt-4">For detailed frameworks, see institutional guidance such as Vanguard's asset allocation resources and Boglehead principles (<a class="text-sky-600 underline" href="https://investor.vanguard.com/investing/portfolio-management/asset-allocation" target="_blank" rel="noopener">Vanguard</a>, <a class="text-sky-600 underline" href="https://www.bogleheads.org/wiki/Main_Page" target="_blank" rel="noopener">Bogleheads</a>).</p>
-        </article>
-
-        <!-- Topic 2: Risk management and diversification -->
-        <article class="bg-white shadow rounded-lg p-6">
-          <h2 class="text-lg font-semibold mb-3">2) Risk management & diversification</h2>
-          <p class="text-gray-700">Diversification reduces portfolio volatility and improves risk-adjusted returns. Key levers:</p>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="space-y-3">
-              <h3 class="font-semibold">Practical diversification tools</h3>
-              <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                <li>Use broad-market ETFs (US total market, total international) instead of single stocks.</li>
-                <li>Add fixed income (short, intermediate, TIPS) to reduce equity volatility.</li>
-                <li>Consider alternative, low-correlation assets (real estate, commodities) for further diversification.</li>
-                <li>Geographic diversification (US vs Developed ex-US vs Emerging Markets).</li>
-              </ul>
-
-              <h3 class="font-semibold mt-2">Implementation examples (ETFs)</h3>
-              <p class="text-sm text-gray-700">Common low-cost ETFs: Vanguard Total Stock Market (VTI), S&P 500 (VOO), Vanguard Total Intl (VXUS), Total Bond Market (BND), TIPS (TIP), Real Estate (VNQ).</p>
-            </div>
-
-            <div>
-              <h3 class="font-semibold">Diversification benefit (illustrative)</h3>
-              <!-- Simple bar chart showing volatility reduction -->
-              <svg viewBox="0 0 300 160" class="w-full h-40" aria-hidden="true">
-                <!-- axes -->
-                <line x1="40" y1="20" x2="40" y2="120" stroke="#94a3b8" stroke-width="1"/>
-                <line x1="40" y1="120" x2="280" y2="120" stroke="#94a3b8" stroke-width="1"/>
-
-                <!-- bars -->
-                <!-- All Equity volatility ~18% -->
-                <rect x="55" y="40" width="40" height="80" fill="#ef4444"/>
-                <text x="75" y="30" text-anchor="middle" font-size="11" fill="#ef4444">All Equity<br/>18%</text>
-
-                <!-- 60/40 volatility ~10.5% -->
-                <rect x="115" y="60" width="40" height="60" fill="#f59e0b"/>
-                <text x="135" y="30" text-anchor="middle" font-size="11" fill="#7c2d12">60/40<br/>10.5%</text>
-
-                <!-- 40/60 volatility ~7.5% -->
-                <rect x="175" y="74" width="40" height="46" fill="#10b981"/>
-                <text x="195" y="30" text-anchor="middle" font-size="11" fill="#065f46">40/60<br/>7.5%</text>
-
-                <!-- three-fund -->
-                <rect x="235" y="52" width="40" height="68" fill="#3b82f6"/>
-                <text x="255" y="30" text-anchor="middle" font-size="11" fill="#1e3a8a">3-Fund<br/>11%</text>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="md:col-span-2 bg-slate-50 p-4 rounded-lg chart-card">
+              <h4 class="text-sm font-medium mb-2">Price trend (illustrative)</h4>
+              <!-- Simple responsive SVG line chart (illustrative only) -->
+              <svg viewBox="0 0 800 200" class="svg-responsive rounded-md shadow-sm" role="img" aria-label="Illustrative Bitcoin price path">
+                <defs>
+                  <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#6366f1" stop-opacity="0.3"/>
+                    <stop offset="100%" stop-color="#c084fc" stop-opacity="0.05"/>
+                  </linearGradient>
+                </defs>
+                <rect width="100%" height="100%" fill="white" rx="6"/>
+                <path d="M40 150 C120 120, 180 90, 260 110 C340 130, 420 70, 500 90 C580 110, 640 60, 760 40" fill="none" stroke="#6366f1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M40 150 C120 120, 180 90, 260 110 C340 130, 420 70, 500 90 C580 110, 640 60, 760 40 L760 200 L40 200 Z" fill="url(#g1)" opacity="0.9"/>
+                <!-- X-axis ticks -->
+                <g fill="#94a3b8" font-size="11">
+                  <text x="40" y="195">-6mo</text>
+                  <text x="210" y="195">-4mo</text>
+                  <text x="380" y="195">-2mo</text>
+                  <text x="550" y="195">Now</text>
+                  <text x="720" y="195">+2mo</text>
+                </g>
               </svg>
+              <p class="text-xs text-slate-500 mt-2">Illustrative line showing one possible path informed by historical volatility and post-halving supply dynamics. Not a forecast.</p>
+            </div>
 
-              <p class="text-xs text-gray-500 mt-2">Numbers are illustrative examples of how adding fixed income reduces volatility. Real historical figures vary by period and implementation.</p>
+            <div class="bg-white p-4 rounded-lg border border-slate-100">
+              <h4 class="text-sm font-medium mb-2">Key historical signals</h4>
+              <ul class="text-sm text-slate-600 list-disc pl-5 space-y-1">
+                <li>Volatility typically compresses then expands in multi-month cycles.</li>
+                <li>Post-halving periods historically reduce issuance pressure — often supportive over time.</li>
+                <li>Seasonal patterns exist but vary in strength and are overruled by macro shocks.</li>
+              </ul>
             </div>
           </div>
+        </div>
 
-          <p class="text-sm text-gray-600 mt-3">For more on correlation and diversification, see research from asset managers and educational organizations (<a class="text-sky-600 underline" href="https://www.blackrock.com/us/individual/education" target="_blank" rel="noopener">BlackRock</a>, <a class="text-sky-600 underline" href="https://www.morningstar.com/" target="_blank" rel="noopener">Morningstar</a>).</p>
-        </article>
-
-        <!-- Topic 3: Portfolio construction methodologies -->
-        <article class="bg-white shadow rounded-lg p-6">
-          <h2 class="text-lg font-semibold mb-3">3) Portfolio construction methodologies</h2>
-          <p class="text-gray-700 mb-3">How you combine exposures matters. Common frameworks:</p>
+        <!-- Macro Financial Drivers -->
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <header class="flex items-start justify-between mb-4">
+            <div>
+              <h2 class="text-2xl font-semibold">2) Macro-Financial Drivers</h2>
+              <p class="text-sm text-slate-600 mt-1">Interest rates, liquidity conditions, and USD dynamics are primary external controls of risk appetite and crypto flows.</p>
+            </div>
+            <div class="text-sm text-slate-500">Sources: Bloomberg · Federal Reserve · IMF analysis</div>
+          </header>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <h3 class="font-semibold">Modern Portfolio Theory (MPT)</h3>
-              <p class="text-sm text-gray-700">MPT optimizes allocation for expected return at a given volatility using the efficient frontier (requires inputs for expected returns, volatilities, and correlations). Useful as a conceptual tool; sensitive to input estimates.</p>
+            <div class="bg-slate-50 p-4 rounded-lg chart-card">
+              <h4 class="text-sm font-medium mb-2">Macro sensitivity visualization (qualitative)</h4>
+              <!-- Stacked horizontal bars representing sensitivity -->
+              <div class="space-y-3">
+                <div class="flex items-center justify-between text-xs text-slate-600"><span>Fed Policy / Rates</span><span>High</span></div>
+                <div class="w-full bg-slate-200 rounded-full h-3">
+                  <div class="bg-indigo-600 h-3 rounded-full" style="width:78%"></div>
+                </div>
 
-              <h3 class="font-semibold mt-3">Factor investing</h3>
-              <p class="text-sm text-gray-700">Tilt portfolios toward systematic factors (value, size, momentum, quality, low volatility). Factor exposure can boost long-term returns but may underperform for multi-year stretches.</p>
-            </div>
+                <div class="flex items-center justify-between text-xs text-slate-600 mt-2"><span>USD Strength</span><span>Medium-High</span></div>
+                <div class="w-full bg-slate-200 rounded-full h-3">
+                  <div class="bg-cyan-500 h-3 rounded-full" style="width:62%"></div>
+                </div>
 
-            <div>
-              <h3 class="font-semibold">Practical rules & robust approaches</h3>
-              <ul class="list-disc pl-5 text-gray-700 space-y-2">
-                <li>Simple low-cost indexed core (e.g., total market) + small satellite bets (factors or active funds).</li>
-                <li>Risk-parity: allocate by risk contribution rather than capital (typically more balanced volatility between bonds and equities).</li>
-                <li>Bogleheads 3-fund: Total US, Total International, Total Bond Market — simple & diversified.</li>
-              </ul>
-
-              <p class="text-sm text-gray-700 mt-2">See educational primers on MPT and practical, evidence-based implementations at <a class="text-sky-600 underline" href="https://www.investopedia.com/terms/m/modernportfoliotheory.asp" target="_blank" rel="noopener">Investopedia</a> and community resources (<a class="text-sky-600 underline" href="https://www.bogleheads.org/" target="_blank" rel="noopener">Bogleheads</a>).</p>
-            </div>
-          </div>
-
-          <!-- Inline miniature comparison table -->
-          <div class="mt-4 overflow-x-auto">
-            <table class="min-w-full text-left text-sm">
-              <thead>
-                <tr class="bg-gray-100">
-                  <th class="px-3 py-2">Method</th>
-                  <th class="px-3 py-2">Strengths</th>
-                  <th class="px-3 py-2">Weaknesses</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="border-t">
-                  <td class="px-3 py-2 font-medium">MPT</td>
-                  <td class="px-3 py-2">Conceptually optimal risk/return mix</td>
-                  <td class="px-3 py-2">Sensitive to input errors</td>
-                </tr>
-                <tr class="border-t bg-gray-50">
-                  <td class="px-3 py-2 font-medium">Factor tilts</td>
-                  <td class="px-3 py-2">Potential return premium</td>
-                  <td class="px-3 py-2">Long underperformance periods</td>
-                </tr>
-                <tr class="border-t">
-                  <td class="px-3 py-2 font-medium">Risk-parity</td>
-                  <td class="px-3 py-2">Smooths volatility</td>
-                  <td class="px-3 py-2">May use leverage; complexity</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </article>
-
-        <!-- Topic 4: Performance comparison of model portfolios -->
-        <article class="bg-white shadow rounded-lg p-6">
-          <h2 class="text-lg font-semibold mb-3">4) Performance comparison: model portfolios</h2>
-          <p class="text-gray-700 mb-3">Below is an illustrative comparison of several commonly recommended model portfolios. Numbers are for conceptual comparison (use up-to-date historical data from trusted sources for exact, period-specific figures).</p>
-
-          <!-- Line chart (SVG) comparing hypothetical returns (illustrative) -->
-          <div class="bg-gray-50 p-4 rounded">
-            <div class="flex items-center justify-between mb-3">
-              <strong>10-year cumulative growth (illustrative)</strong>
-              <div class="flex items-center gap-3 text-sm">
-                <span class="flex items-center gap-1"><svg class="w-3 h-3 text-red-500" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6" fill="currentColor"/></svg> All Equity</span>
-                <span class="flex items-center gap-1"><svg class="w-3 h-3 text-amber-500" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6" fill="currentColor"/></svg> 60/40</span>
-                <span class="flex items-center gap-1"><svg class="w-3 h-3 text-sky-500" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6" fill="currentColor"/></svg> 3-Fund</span>
-                <span class="flex items-center gap-1"><svg class="w-3 h-3 text-emerald-500" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6" fill="currentColor"/></svg> Target-Date</span>
+                <div class="flex items-center justify-between text-xs text-slate-600 mt-2"><span>Equity Risk Appetite</span><span>Medium</span></div>
+                <div class="w-full bg-slate-200 rounded-full h-3">
+                  <div class="bg-rose-500 h-3 rounded-full" style="width:48%"></div>
+                </div>
               </div>
+              <p class="mt-3 text-xs text-slate-500">Higher policy rates / tighter liquidity historically reduce risk-on flows; easing supports risk assets including crypto.</p>
             </div>
 
-            <svg viewBox="0 0 700 220" class="w-full h-48">
-              <!-- grid -->
-              <g stroke="#e6eef8" stroke-width="1">
-                <line x1="60" y1="20" x2="660" y2="20"></line>
-                <line x1="60" y1="60" x2="660" y2="60"></line>
-                <line x1="60" y1="100" x2="660" y2="100"></line>
-                <line x1="60" y1="140" x2="660" y2="140"></line>
-                <line x1="60" y1="180" x2="660" y2="180"></line>
-              </g>
-
-              <!-- axes -->
-              <line x1="60" y1="20" x2="60" y2="180" stroke="#94a3b8" stroke-width="1.2"></line>
-              <line x1="60" y1="180" x2="660" y2="180" stroke="#94a3b8" stroke-width="1.2"></line>
-
-              <!-- Example paths (normalized growth index) -->
-              <!-- All Equity (red) -->
-              <path d="M60 160 C140 140,220 120,300 110 C380 100,460 90,540 85 C620 80,660 72,700 68" stroke="#ef4444" stroke-width="3" fill="none" stroke-linecap="round"/>
-              <!-- 60/40 (amber) -->
-              <path d="M60 165 C140 150,220 140,300 135 C380 130,460 125,540 120 C620 115,660 110,700 108" stroke="#f59e0b" stroke-width="3" fill="none" stroke-linecap="round"/>
-              <!-- 3-Fund (sky) -->
-              <path d="M60 158 C140 138,220 124,300 118 C380 112,460 108,540 105 C620 102,660 100,700 99" stroke="#0ea5e9" stroke-width="3" fill="none" stroke-linecap="round"/>
-              <!-- Target-Date (green) -->
-              <path d="M60 162 C140 149,220 141,300 137 C380 133,460 131,540 128 C620 126,660 125,700 124" stroke="#10b981" stroke-width="3" fill="none" stroke-linecap="round"/>
-            </svg>
-            <p class="text-xs text-gray-500 mt-2">Illustrative long-term patterns: higher equity share → higher variability but potentially higher returns. Use historical data sources (Morningstar, Vanguard) for exact historical series.</p>
+            <div class="bg-white p-4 rounded-lg border border-slate-100">
+              <h4 class="text-sm font-medium mb-2">Actionable considerations</h4>
+              <ol class="text-sm text-slate-600 list-decimal pl-5 space-y-1">
+                <li>Monitor real rates — falling real yields often increase capital allocated to risk assets.</li>
+                <li>Watch liquidity proxies and institutional flows; ETF inflows can be a multi-week to multi-month price driver.</li>
+                <li>Be prepared for volatility around major macro prints (inflation, payrolls, central bank meetings).</li>
+              </ol>
+            </div>
           </div>
+        </div>
 
-          <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="bg-white p-4 rounded shadow-sm">
-              <h4 class="font-semibold">Representative 10-year (illustrative) metrics</h4>
-              <ul class="text-sm text-gray-700 mt-2 space-y-1">
-                <li><strong>All Equity:</strong> Return ~9–10% p.a., volatility ~16–18%, larger drawdowns</li>
-                <li><strong>60/40:</strong> Return ~6–8% p.a., volatility ~8–11%, smaller drawdowns than pure equity</li>
-                <li><strong>3-Fund (balanced tilt):</strong> Return ~7–9% p.a., volatility ~10–12%</li>
-                <li><strong>Target-Date:</strong> Return depends on vintage; glidepath reduces risk with time</li>
+        <!-- Technology & Network -->
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <header class="flex items-start justify-between mb-4">
+            <div>
+              <h2 class="text-2xl font-semibold">3) Network & Technology Developments</h2>
+              <p class="text-sm text-slate-600 mt-1">Network upgrades, Lightning adoption and miner economics influence utility, transaction throughput, and long-term supply/demand dynamics.</p>
+            </div>
+            <div class="text-sm text-slate-500">Sources: Bitcoin.org · Cointelegraph · Lightning Network stats</div>
+          </header>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="md:col-span-2 bg-slate-50 p-4 rounded-lg chart-card">
+              <h4 class="text-sm font-medium mb-2">Adoption drivers (illustrative)</h4>
+              <!-- Donut chart (simple) -->
+              <svg viewBox="0 0 200 200" class="svg-responsive" role="img" aria-label="Illustrative network adoption components">
+                <defs>
+                  <linearGradient id="gA" x1="0" x2="1">
+                    <stop offset="0%" stop-color="#06b6d4"/>
+                    <stop offset="100%" stop-color="#7c3aed"/>
+                  </linearGradient>
+                </defs>
+                <g transform="translate(100,100)">
+                  <!-- Background circle -->
+                  <circle r="70" fill="#f8fafc"/>
+                  <!-- slices (illustrative proportions) -->
+                  <path d="M70 0 A70 70 0 0 1  -21.65 66.13 L -21.65 66.13 A35 35 0 0 0 21.65 33.07 Z" fill="#06b6d4"/>
+                  <path d="M-21.65 66.13 A70 70 0 0 1 -68.17 18.21 L -68.17 18.21 A35 35 0 0 0 -10.83 -9.11 Z" fill="#7c3aed"/>
+                  <path d="M-68.17 18.21 A70 70 0 0 1 -21.65 -66.13 L -21.65 -66.13 A35 35 0 0 0 21.65 -33.07 Z" fill="#ef4444"/>
+                  <path d="M-21.65 -66.13 A70 70 0 0 1 70 0 L70 0 A35 35 0 0 0 21.65 33.07 Z" fill="#f59e0b"/>
+                  <circle r="30" fill="white"/>
+                </g>
+                <text x="50%" y="90%" text-anchor="middle" class="text-xs" style="font-size:11px; fill:#475569">Illustrative split of network growth drivers</text>
+              </svg>
+              <p class="text-xs text-slate-500 mt-2">Components include payments (Lightning), developer ecosystem (Taproot & soft forks), and custody & settlement improvements.</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg border border-slate-100">
+              <h4 class="text-sm font-medium mb-2">Network checklist</h4>
+              <ul class="text-sm text-slate-600 list-disc pl-5 space-y-1">
+                <li>Lightning capacity & channel growth — improves usability for micro-payments.</li>
+                <li>Taproot & upgrade adoption — incremental privacy & smart contracting benefits.</li>
+                <li>Miner revenue mix (fees vs subsidy) — watch transaction fees during high activity bursts.</li>
               </ul>
-              <p class="text-xs text-gray-500 mt-2">These ranges are illustrative—actual results depend on time window, asset choices, fees, and rebalancing. See performance tools on <a class="text-sky-600 underline" href="https://www.morningstar.com/" target="_blank" rel="noopener">Morningstar</a> or provider reports (Vanguard, BlackRock).</p>
-            </div>
-
-            <div class="bg-white p-4 rounded shadow-sm">
-              <h4 class="font-semibold">Drawdown & behavior</h4>
-              <p class="text-sm text-gray-700 mt-2">Large drawdowns test investor discipline. Choose a portfolio you can maintain through stress — if you sell after a drop, you crystallize losses and reduce expected long-term returns.</p>
-              <div class="mt-3 flex gap-2">
-                <span class="inline-flex items-center gap-2 bg-red-50 text-red-700 px-3 py-1 rounded-full text-xs">Max Drawdown: Higher for all-equity</span>
-                <span class="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-xs">Volatility: Reduced with bonds</span>
-              </div>
             </div>
           </div>
-        </article>
+        </div>
 
-        <!-- Implementation & practical checklist -->
-        <article class="bg-white shadow rounded-lg p-6">
-          <h2 class="text-lg font-semibold mb-3">Implementation & practical checklist</h2>
+        <!-- Social & Investor Dynamics -->
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <header class="flex items-start justify-between mb-4">
+            <div>
+              <h2 class="text-2xl font-semibold">4) Social and Investor-Driven Factors</h2>
+              <p class="text-sm text-slate-600 mt-1">ETF flows, institutional custody, whale accumulation, derivatives positioning and retail sentiment can amplify moves in either direction.</p>
+            </div>
+            <div class="text-sm text-slate-500">Sources: SEC · CoinShares · Glassnode · Kaiko</div>
+          </header>
+
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <h3 class="font-semibold">Step-by-step</h3>
-              <ol class="list-decimal pl-5 text-gray-700 space-y-2">
-                <li>Clarify goals, time horizon, and risk tolerance.</li>
-                <li>Select a strategic asset allocation (e.g., 80/20, 60/40, 40/60) matched to that profile.</li>
-                <li>Implement core exposures using low-cost broad-market ETFs/funds.</li>
-                <li>Add diversified satellites (factor tilts, alternatives) sparingly and measure impact.</li>
-                <li>Rebalance periodically and keep costs low.</li>
+            <div class="bg-slate-50 p-4 rounded-lg">
+              <h4 class="text-sm font-medium mb-2">Derivatives & leverage</h4>
+              <p class="text-sm text-slate-600">Funding rates, futures open interest and concentrated short/long positions can create rapid directional moves when liquidations occur. Watch funding rate shifts and reductions in open interest for signs of deleveraging.</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg border border-slate-100">
+              <h4 class="text-sm font-medium mb-2">Sentiment & flow signals</h4>
+              <ul class="text-sm text-slate-600 list-disc pl-5 space-y-1">
+                <li>Exchange reserve trends (outflows → bullish; inflows → bearish)</li>
+                <li>Institutional product flows (ETF/Custody) — sustained inflows can underpin multi-week rallies</li>
+                <li>Social indicators (searches/mentions) often lead short-term retail-driven spikes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Findings and Metrics -->
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <header class="flex items-start justify-between mb-4">
+            <h2 class="text-2xl font-semibold">Key Findings & Practical Signals</h2>
+            <div class="text-sm text-slate-500">Synthesis of indicators</div>
+          </header>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="p-4 rounded-lg bg-slate-50">
+              <h4 class="text-sm font-medium mb-2">Leading indicators (watch closely)</h4>
+              <ol class="text-sm text-slate-600 list-decimal pl-5 space-y-1">
+                <li>Real yield trajectory and Fed messaging</li>
+                <li>ETF net flows and institutional custody inflows</li>
+                <li>Exchange reserve movements and large-wallet accumulation</li>
               </ol>
             </div>
 
-            <div>
-              <h3 class="font-semibold">Sample model portfolios (implementation)</h3>
-              <div class="space-y-3 mt-2">
-                <!-- Card 1 -->
-                <div class="rounded-lg border p-3 bg-gray-50">
-                  <div class="flex items-center justify-between">
-                    <div>
-                      <h4 class="font-semibold">Conservative (example)</h4>
-                      <p class="text-xs text-gray-600">35% Equity / 65% Bonds</p>
-                    </div>
-                    <div class="text-sm text-gray-700 font-mono">Suitable: Capital preservation</div>
-                  </div>
-                  <div class="mt-2 text-sm text-gray-700">
-                    <p>ETFs: VTI 25%, VXUS 10%, BND 65%</p>
-                  </div>
-                </div>
+            <div class="p-4 rounded-lg bg-slate-50">
+              <h4 class="text-sm font-medium mb-2">Near-term scenario framing</h4>
+              <ul class="text-sm text-slate-600 list-disc pl-5 space-y-1">
+                <li>Base case: Consolidation with episodic rallies if institutional demand continues.</li>
+                <li>Bull case: Macro easing + continuous ETF inflows → sustained uptrend.</li>
+                <li>Bear case: Tightening + outflows → sharp corrections and volatility spikes.</li>
+              </ul>
+            </div>
 
-                <!-- Card 2 -->
-                <div class="rounded-lg border p-3 bg-white">
-                  <div class="flex items-center justify-between">
-                    <div>
-                      <h4 class="font-semibold">Balanced (example)</h4>
-                      <p class="text-xs text-gray-600">60% Equity / 40% Bonds</p>
-                    </div>
-                    <div class="text-sm text-gray-700 font-mono">Suitable: Long-term growth & moderate volatility</div>
-                  </div>
-                  <div class="mt-2 text-sm text-gray-700">
-                    <p>ETFs: VTI 40%, VXUS 20%, BND 40%</p>
-                  </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="rounded-lg border p-3 bg-gray-50">
-                  <div class="flex items-center justify-between">
-                    <div>
-                      <h4 class="font-semibold">Aggressive (example)</h4>
-                      <p class="text-xs text-gray-600">90% Equity / 10% Bonds</p>
-                    </div>
-                    <div class="text-sm text-gray-700 font-mono">Suitable: Long horizon, high risk tolerance</div>
-                  </div>
-                  <div class="mt-2 text-sm text-gray-700">
-                    <p>ETFs: VTI 60%, VXUS 30%, BND 10%</p>
-                  </div>
-                </div>
-              </div>
+            <div class="p-4 rounded-lg bg-slate-50">
+              <h4 class="text-sm font-medium mb-2">Practical risk management</h4>
+              <ul class="text-sm text-slate-600 list-disc pl-5 space-y-1">
+                <li>Use defined position sizing for high volatility</li>
+                <li>Hedge around major macro events if leveraged</li>
+                <li>Monitor exchange flows & derivatives to avoid surprise squeezes</li>
+              </ul>
             </div>
           </div>
-
-          <p class="text-xs text-gray-500 mt-3">ETF tickers are examples for U.S.-listed broad-market exposures (Vanguard tickers used as examples). Choose funds that match your domicile, tax situation, and access.</p>
-        </article>
-
+        </div>
       </section>
 
-      <!-- Right column: key findings, quick recommendations, sources -->
-      <aside class="space-y-6">
-        <div class="bg-white shadow rounded-lg p-6 sticky top-6">
-          <h3 class="text-lg font-semibold mb-3">Key findings & quick recommendations</h3>
-          <ul class="text-gray-700 space-y-2">
-            <li><strong>Start with goals:</strong> Design allocation to match objectives and tolerance.</li>
-            <li><strong>Core exposure:</strong> Low-cost, broad-market equities should form the portfolio core.</li>
-            <li><strong>Diversify:</strong> Use bonds and international equities to manage volatility and drawdown.</li>
-            <li><strong>Keep costs low:</strong> Fees materially reduce long-run returns; prefer low-cost index funds where appropriate.</li>
-            <li><strong>Behavior matters:</strong> Pick a portfolio you can hold through stress—discipline often beats small theoretical optimizations.</li>
-          </ul>
+      <!-- Sources & Notes -->
+      <footer class="mt-6 bg-white p-6 rounded-lg shadow-sm">
+        <div class="flex flex-col md:flex-row md:justify-between gap-4">
+          <div class="max-w-2xl">
+            <h3 class="text-lg font-semibold mb-2">Sources & further reading</h3>
+            <p class="text-sm text-slate-600 mb-3">The sections above synthesize public market analysis, on-chain research and macro research up through mid-2024. For real-time price data and live metrics consult the original providers below.</p>
 
-          <div class="mt-4">
-            <a href="#references" class="inline-block bg-sky-600 text-white px-3 py-2 rounded hover:bg-sky-700 text-sm">View sources & further reading</a>
+            <ul class="text-sm text-slate-700 list-none space-y-2">
+              <li><a class="text-indigo-600 hover:underline" href="https://www.coindesk.com" target="_blank" rel="noopener">CoinDesk — Market Analysis & News</a></li>
+              <li><a class="text-indigo-600 hover:underline" href="https://www.tradingview.com" target="_blank" rel="noopener">TradingView — Historical Charts & Technical Tools</a></li>
+              <li><a class="text-indigo-600 hover:underline" href="https://glassnode.com" target="_blank" rel="noopener">Glassnode — On-chain Metrics & Reports</a></li>
+              <li><a class="text-indigo-600 hover:underline" href="https://bitcoin.org" target="_blank" rel="noopener">Bitcoin.org — Technical Resources & Upgrade Notes</a></li>
+              <li><a class="text-indigo-600 hover:underline" href="https://cointelegraph.com" target="_blank" rel="noopener">Cointelegraph — Technology & Adoption Coverage</a></li>
+              <li><a class="text-indigo-600 hover:underline" href="https://www.sec.gov" target="_blank" rel="noopener">U.S. Securities and Exchange Commission — Filings & Regulatory Actions</a></li>
+              <li><a class="text-indigo-600 hover:underline" href="https://www.coinshares.com" target="_blank" rel="noopener">CoinShares — Institutional Flow Reports</a></li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 p-4 rounded-lg border border-slate-100 w-full md:w-64">
+            <h4 class="text-sm font-medium mb-2">Report notes</h4>
+            <p class="text-xs text-slate-600">This report is informational, synthesizing public research and historical patterns up to mid-2024. It is not investment advice. Before making financial decisions consult up-to-date data and a licensed professional.</p>
+            <div class="mt-3 flex gap-2">
+              <span class="inline-flex items-center gap-2 px-2 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-semibold">
+                <!-- tiny badge SVG -->
+                <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M12 2l2.9 6.2L21 9.1l-5 3.9L17 21l-5-3.2L7 21l1-8L3 9.1l6.1-.9L12 2z" fill="#6366f1"/>
+                </svg>
+                Research snapshot
+              </span>
+              <span class="inline-flex items-center gap-2 px-2 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold">Tailwind UI</span>
+            </div>
           </div>
         </div>
 
-        <div class="bg-white shadow rounded-lg p-6">
-          <h3 class="text-lg font-semibold mb-3">Risk checklist (quick)</h3>
-          <ul class="text-gray-700 space-y-2 text-sm">
-            <li>Do you have a written investment policy (allocation, rebalancing rules)?</li>
-            <li>Have you stress-tested expected drawdowns against your risk tolerance?</li>
-            <li>Do you monitor fees, taxes, and implement tax-efficient wrappers (IRA, 401k, taxable strategies)?</li>
-            <li>Is your emergency liquidity (cash) adequate to avoid forced selling?</li>
-          </ul>
+        <div class="mt-6 text-xs text-slate-500">
+          <p>Important: Charts in this report are illustrative visualizations for structural explanation. They do not represent live pricing or precise forecasts. For live data, use exchange APIs, on-chain analytics providers and official market data vendors.</p>
         </div>
-
-        <div class="bg-white shadow rounded-lg p-6">
-          <h3 class="text-lg font-semibold mb-3">Sources (select)</h3>
-          <ul class="text-sm space-y-2">
-            <li><a class="text-sky-600 underline" href="https://investor.vanguard.com/investing/portfolio-management/asset-allocation" target="_blank" rel="noopener">Vanguard — Asset allocation & portfolio construction guidance</a></li>
-            <li><a class="text-sky-600 underline" href="https://www.bogleheads.org/wiki/Main_Page" target="_blank" rel="noopener">Bogleheads — Practical investor community & 3-fund portfolio</a></li>
-            <li><a class="text-sky-600 underline" href="https://www.morningstar.com" target="_blank" rel="noopener">Morningstar — Fund performance & portfolio analysis tools</a></li>
-            <li><a class="text-sky-600 underline" href="https://www.blackrock.com/us/individual/education" target="_blank" rel="noopener">BlackRock — Education on diversification & risk management</a></li>
-            <li><a class="text-sky-600 underline" href="https://www.investopedia.com" target="_blank" rel="noopener">Investopedia — MPT, factor basics, implementation primers</a></li>
-            <li><a class="text-sky-600 underline" href="https://www.cfainstitute.org" target="_blank" rel="noopener">CFA Institute — Research & practitioner perspectives</a></li>
-          </ul>
-        </div>
-
-      </aside>
-    </div>
-
-    <!-- References & attribution -->
-    <section id="references" class="mt-8">
-      <div class="bg-white shadow rounded-lg p-6">
-        <h2 class="text-lg font-semibold mb-3">Sources & further reading</h2>
-
-        <p class="text-sm text-gray-700 mb-3">This report synthesizes common evidence-based principles and publicly available guidance from major asset managers, academic and practitioner sources. For rigorous, up-to-date historical statistics and model backtests, consult the primary sources and tools below.</p>
-
-        <ul class="list-inside list-disc text-sm text-gray-700 space-y-2">
-          <li><a class="text-sky-600 underline" href="https://investor.vanguard.com/investing/portfolio-management/asset-allocation" target="_blank" rel="noopener">Vanguard — Asset allocation & portfolio management resources</a></li>
-          <li><a class="text-sky-600 underline" href="https://www.bogleheads.org/wiki/Main_Page" target="_blank" rel="noopener">Bogleheads — Practical investing community and the 3-fund portfolio</a></li>
-          <li><a class="text-sky-600 underline" href="https://www.morningstar.com" target="_blank" rel="noopener">Morningstar — Fund and portfolio performance data and analysis</a></li>
-          <li><a class="text-sky-600 underline" href="https://www.blackrock.com/us/individual/education" target="_blank" rel="noopener">BlackRock — Education on diversification and portfolio construction</a></li>
-          <li><a class="text-sky-600 underline" href="https://www.investopedia.com/terms/m/modernportfoliotheory.asp" target="_blank" rel="noopener">Investopedia — Modern Portfolio Theory overview</a></li>
-          <li><a class="text-sky-600 underline" href="https://www.cfainstitute.org/en/research" target="_blank" rel="noopener">CFA Institute — Research and practitioner articles</a></li>
-        </ul>
-
-        <p class="text-xs text-gray-500 mt-4">Note: Charts and numerical examples in this report are illustrative to demonstrate concepts. They do not reflect a specific period's historical returns. For precise historical performance, fee-adjusted returns, tax impacts, and drawdown figures, use provider tools (Vanguard, BlackRock, Morningstar) or exchange-provided historical data and run period-specific analyses.</p>
-      </div>
-    </section>
-
-    <footer class="mt-8 text-center text-xs text-gray-500">
-      <p>Prepared as an evidence-based guide — for educational purposes only. Not financial advice. Consider consulting a registered financial professional for personalized recommendations.</p>
-    </footer>
+      </footer>
+    </article>
   </main>
-
-  <!-- End of document -->
 </body>
 </html>

@@ -97,7 +97,7 @@ export function GptWindow({ research_topic, researching, handleResearchFinished 
                       return (
                         <div
                           key={`${message.id}-${index}`}
-                          className="prose max-w-none  mt-2 bg-white shadow-sm rounded-2xl p-4"
+                          className="prose max-w-none  mt-2  shadow-sm rounded-2xl p-4"
                           dangerouslySetInnerHTML={{ __html: sanitized }}
                         />
                       )

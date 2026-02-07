@@ -1,12 +1,9 @@
 import {
     UIMessage,
-    UIDataTypes,
     streamText,
     tool,
     convertToModelMessages,
     stepCountIs,
-    InferUITools,
-    UIMessagePart,
   } from "ai";
   import { openai } from "@ai-sdk/openai";
   import { z } from "zod";
@@ -16,13 +13,10 @@ import {
 
 const topicCount = 4;
 
-const topicTool = tool({
+const topicTool = tool<{ userPrompt: string }, { topics: string[] }>({
     description:  `Get a list of ${topicCount} topics based on what the prompt wants to research.`,
     inputSchema: z.object({
         userPrompt: z.string().describe("The prompt inserted by the user.")
-    }),
-    schema: z.object({
-        topics: z.array(z.string()).describe("The list of topics predicted from the prompt.")
     }),
     execute: async ({userPrompt}) => {
         console.log("IN The tool, got prompt: ", userPrompt)
@@ -36,7 +30,9 @@ const topicTool = tool({
             - Will provide valuable insights when researched
             Return ONLY the topics as a numbered list with no additional text.`,
         })
-        return result.toUIMessageStreamResponse()
+        const text = await result.text;
+        const topics = text.split('\n').filter(line => line.trim()).map(line => line.replace(/^\d+\.\s*/, '').trim());
+        return { topics }
     }
 })
 
@@ -50,13 +46,10 @@ const webSearchTool = tavilySearch({
   query: "search the internet for the following topics"
 })
 
-const getWebSearchData = tool({
+const getWebSearchData =  tool<{ topics: string[] }, { searchResults: string[] }>({
   description: "Use this tool to get relevant web search data for the given research topics.",
   inputSchema: z.object({
       topics: z.array(z.string()).describe("The list of research topics to search for.")
-  }),
-  schema: z.object({
-      searchResults: z.array(z.string()).describe("The web search results for the given topics.")
   }),
   execute: async ({topics}) => {
         console.log("IN The web search tool, got topics: ", topics)
@@ -66,19 +59,17 @@ const getWebSearchData = tool({
             tools: {webSearchTool},
             stopWhen: stepCountIs(2),
             })
-      return result.toUIMessageStreamResponse()
+      const text = await result.text;
+      return { searchResults: [text] }
   }
 })
 
-const researchToHtmlTool = tool({
+const researchToHtmlTool = tool<{ searchResults: string[] }, { researchHtml: string }>({
   description: "Synthesize a comprehensive research response based on the web search data gathered and return it to the user as an HTML formatted response.",
   inputSchema: z.object({
       searchResults: z.array(z.string()).describe("The web search results for the given topics.")
   }),
-  schema: z.object({
-      researchHtml: z.string().describe("The comprehensive research response in HTML format.")
-  }),
-  execute: async ({searchResults}) => {
+    execute: async ({searchResults}) => {
         console.log("IN The research to HTML tool, got search results: ", searchResults)
       const result = await streamText({
         model: openai("gpt-4"),
@@ -118,19 +109,17 @@ Generate an HTML report with these requirements:
 8. RESPONSIVE: Use Tailwind utility classes to ensure content works on mobile and desktop
 9. RETURN ONLY HTML: No markdown, no explanations, just clean HTML that renders properly`,
             })
-      return result.toUIMessageStreamResponse()
-  }
+      const text = await result.text;
+      return { researchHtml: text }
+    }
 })
 
-const prettyHTMLTool = tool({
+const prettyHTMLTool = tool<{ htmlContent: string }, { formattedHtml: string }>({
   description: "Format the given HTML content to be more readable and visually appealing.",
   inputSchema: z.object({
       htmlContent: z.string().describe("The raw HTML content to be formatted.")
   }),
-  schema: z.object({
-      formattedHtml: z.string().describe("The formatted HTML content.")
-  }),
-  execute: async ({htmlContent}) => {
+    execute: async ({htmlContent}) => {
         console.log("IN The pretty HTML tool, got html content: ", htmlContent)
       const result = await streamText({
         model: openai("gpt-4"),
@@ -150,6 +139,7 @@ Enhancement instructions:
    - Ensure the text colors have good contrast with the background for readability, text should be darker colors.
    - Use font-semibold or font-bold strategically for emphasis
    - Add tracking-wide or tracking-wider for important text
+   - Use dark text colors (e.g. text-gray-800) on light backgrounds and light text colors (e.g. text-white) on dark backgrounds for optimal readability
 3. LAYOUT & SPACING:
    - Wrap content in max-w containers (max-w-4xl recommended)
    - Add generous padding and margins between sections
@@ -163,7 +153,7 @@ Enhancement instructions:
    - Use badges (px-3 py-1 rounded-full) for tags/categories
    - Add border-accent colors to important callouts
 6. BACKGROUNDS:
-   - Use backgrounds that look good when printed on a dark screen.
+   - Use light color backgrounds.
    - Add subtle pattern or gradient overlays where appropriate
    - Ensure sufficient contrast for readability
 7. VISUAL POLISH:
@@ -172,15 +162,17 @@ Enhancement instructions:
    - Add subtle animations or fade effects
 8. RETURN ONLY THE ENHANCED HTML: No explanations or markdown, preserve all content, just enhance styling`,
             })
-      return result.toUIMessageStreamResponse()
-  }
+      const text = await result.text;
+      return { formattedHtml: text }
+    }
 })
   
 
 async function getTextFromUIMessages(message: UIMessage): Promise<string> {
     const res = await convertToModelMessages([message]);
+    const userPromptText = typeof res[0].content[0] === 'string' ? res[0].content[0] : (res[0].content[0] as any).text || '';
     return  `Research Task Instructions:
-1. Identify ${topicCount} specific research topics based on the user prompt: "${res[0].content[0].text}"
+1. Identify ${topicCount} specific research topics based on the user prompt: "${userPromptText}". These topics should cover different aspects of the subject and be specific enough to find relevant information online.
 2. Use the web search tool to conduct thorough research on each topic and gather relevant information
 3. Synthesize the search results into a comprehensive, well-structured HTML report that includes:
    - Clear title and introduction
@@ -207,7 +199,15 @@ async function saveHtmlFile(htmlContent: string, filename?: string): Promise<str
   
   // Ensure directory exists
   await fs.mkdir(path.dirname(filePath), { recursive: true });
-  
+  const htmlData = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    ${htmlContent}
+    </head>
+    </html>`;
   // Write the file
   await fs.writeFile(filePath, htmlContent, 'utf-8');
   
