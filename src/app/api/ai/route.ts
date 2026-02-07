@@ -14,8 +14,6 @@ import {
   import { promises as fs } from 'fs';
   import path from 'path';
 
-export type ChatTools = InferUITools<typeof tools>;
-export type ChatMessage = UIMessage<never, UIDataTypes, ChatTools>;
 const topicCount = 4;
 
 const topicTool = tool({
