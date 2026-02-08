@@ -1,417 +1,161 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Who Is Most Likely to Win the Super Bowl 2026? — Data & Analysis</title>
-
-  <!-- Tailwind CDN for utility classes -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    /* Minor custom styles for charts and print */
-    .card-gradient { background: linear-gradient(90deg,#0ea5a4 0%,#2563eb 100%); }
-    .badge { display:inline-flex; align-items:center; gap:.5rem; padding:.25rem .5rem; border-radius:.5rem; font-weight:600; }
-    @media print {
-      .no-print { display:none !important; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased">
+<body>
+    <div class="max-w-4xl mx-auto p-6 sm:p-8 bg-slate-50 text-gray-800" style="-webkit-tap-highlight-color: transparent;">
+  <!-- Gradient Header -->
+  <div class="p-6 rounded-lg shadow-lg border-t-4 border-indigo-700 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+    <h1 class="text-3xl sm:text-4xl font-bold tracking-wide">Alphabet Inc. — Concise Investment Memo</h1>
+    <p class="text-sm sm:text-base text-white/90 mt-2">A focused 1–2 page investment memo summarizing recent trends, segment performance, valuation scenarios, and key risks based on preliminary searches of Alphabet filings, industry reports, and news coverage. ✅ Latest scope: through 2024 filings and public investor releases (preliminary).</p>
+  </div>
 
-  <header class="max-w-6xl mx-auto p-6">
-    <div class="rounded-xl overflow-hidden shadow-lg card-gradient p-6 text-white">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        <div>
-          <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight">Who Is Most Likely to Win the Super Bowl 2026?</h1>
-          <p class="mt-2 text-sm md:text-base text-cyan-100/90">A 2026 Super Bowl probability report — combining recent team trends (2021–2025), key player health & performance, coaching stability, and roster/economic factors. Includes model-based probabilities, visualizations, and sources.</p>
-        </div>
-        <div class="flex gap-2 items-center">
-          <span class="badge bg-white/10 text-white">Prognosis • 2026</span>
-          <span class="badge bg-white/10 text-white">Data-driven</span>
-        </div>
+  <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+    <!-- Key Highlights / Badges -->
+    <div class="rounded-lg shadow-md border border-slate-200 hover:shadow-lg transition-transform duration-200 hover:-translate-y-1 p-6 bg-white">
+      <h2 class="text-2xl font-semibold tracking-wide">Key Highlights</h2>
+      <div class="mt-4 flex flex-wrap gap-3">
+        <span class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-sm">Large-cap Internet Leader</span>
+        <span class="bg-gradient-to-r from-green-500 to-teal-500 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-sm">Diversified Revenue Mix</span>
+        <span class="bg-gradient-to-r from-amber-400 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-sm">Cloud Growth Trajectory</span>
+      </div>
+
+      <hr class="my-4 border-slate-200" />
+
+      <ul class="text-sm text-gray-700 space-y-2">
+        <li>Core advertising remains the primary cash generator, with YouTube and Search ad formats showing continued monetization focus. 📈</li>
+        <li>Google Cloud is a strategic growth engine — market-share gains reported in industry analyses (e.g., Gartner/IDC referenced in searches).</li>
+        <li>Ongoing investments in AI (models, developer tools, ads productization) drive optionality across Business Units.</li>
+        <li>Active capital return via buybacks and strong free-cash-flow conversion noted in investor filings.</li>
+      </ul>
+    </div>
+
+    <!-- Quick Stats / Sources -->
+    <div class="rounded-lg shadow-md border border-slate-200 hover:shadow-lg transition-transform duration-200 hover:-translate-y-1 p-6 bg-white">
+      <h2 class="text-2xl font-semibold tracking-wide">Quick Context & Sources</h2>
+      <p class="text-sm text-gray-700 mt-3">Primary materials referenced in the preliminary search:</p>
+      <ul class="text-sm text-gray-700 list-disc ml-5 mt-3 space-y-1">
+        <li>Alphabet 10-K / 10-Q and investor relations releases (latest filings through 2024)</li>
+        <li>Industry reports: Gartner / IDC cloud market commentary</li>
+        <li>Ad-spend and monetization analyses (eMarketer / InsiderIntelligence & press coverage)</li>
+        <li>Regulatory and legal reporting from major news outlets</li>
+      </ul>
+
+      <hr class="my-4 border-slate-200" />
+
+      <div class="border-l-4 border-blue-500 bg-blue-50 p-3 text-sm text-gray-700">
+        <strong>Note:</strong> This memo uses high-level findings from the searches above. For a full sourced analysis with tables and DCF workpapers, request the full report or financial model option.
       </div>
     </div>
-  </header>
+  </div>
 
-  <main class="max-w-6xl mx-auto px-6 pb-12">
+  <!-- Main Content Sections -->
+  <div class="mt-6 grid grid-cols-1 gap-6">
+    <!-- Executive Summary Card -->
+    <div class="rounded-lg shadow-md border border-slate-200 hover:shadow-lg transition-transform duration-200 hover:-translate-y-1 p-6 bg-white">
+      <h2 class="text-2xl font-semibold tracking-wide">Executive Summary</h2>
+      <p class="text-sm text-gray-700 mt-3">Alphabet remains a dominant digital-advertising and cloud platform company with material optionality from AI and YouTube monetization. Revenue is diversified across Search & ads, YouTube, Cloud, and Other Bets/Hardware. Despite regulatory scrutiny in multiple regions, the company’s balance sheet, cash flow profile, and capital return program support continued investment and shareholder distributions.</p>
 
-    <!-- Executive Summary -->
-    <section class="mt-6 bg-white rounded-xl shadow p-6">
-      <h2 class="text-xl font-bold mb-3">Executive Summary</h2>
-      <p class="text-sm text-gray-700 leading-relaxed">
-        Based on the latest multi-factor model that blends team performance trends (2021–2025), quarterback and key-player continuity, coaching stability, salary-cap and roster-building indicators, and publicly available ELO-style metrics, the teams most likely to win the Super Bowl in the 2025–26 season are concentrated among established contenders whose windows remain open. The model assigns probability mass across a shortlist of perennial contenders while accounting for variance and mid-season dynamics.
-      </p>
-
-      <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-3">
-        <div class="p-3 rounded-lg border border-gray-100">
-          <div class="text-xs uppercase text-gray-500">Top Single Team Probability</div>
-          <div class="text-2xl font-bold">Kansas City Chiefs — 18%</div>
-        </div>
-        <div class="p-3 rounded-lg border border-gray-100">
-          <div class="text-xs uppercase text-gray-500">Top 3 Combined</div>
-          <div class="text-2xl font-bold">46% (Chiefs / 49ers / Bills)</div>
-        </div>
-        <div class="p-3 rounded-lg border border-gray-100">
-          <div class="text-xs uppercase text-gray-500">Model Type</div>
-          <div class="text-2xl font-bold">Hybrid Monte Carlo / ELO weighted</div>
-        </div>
+      <div class="mt-4 border-l-4 border-green-500 bg-green-50 p-3 text-sm text-gray-700">
+        <strong class="font-semibold tracking-wide">Investment thesis:</strong> Buy on conviction of sustained ad monetization + accelerating Cloud & AI revenue mix, balanced against regulatory and macro risks. 🎯
       </div>
-    </section>
+    </div>
 
-    <!-- Methodology -->
-    <section class="mt-6 grid md:grid-cols-3 gap-6">
-      <article class="md:col-span-2 bg-white rounded-xl shadow p-6">
-        <h3 class="text-lg font-semibold mb-3">Methodology</h3>
-        <p class="text-sm text-gray-700 leading-relaxed">
-          The report uses a hybrid approach:
-        </p>
-        <ul class="list-disc list-inside mt-3 text-sm text-gray-700 space-y-2">
-          <li><strong>Trend analysis (2021–2025)</strong> — win-loss records, point differentials, playoff frequency, and roster continuity to estimate a team's baseline strength.</li>
-          <li><strong>Player impact model</strong> — quarterback and top-5 positional contributions weighted by Expected Points Added (EPA) and advanced grades (where available), with injury history adjustments.</li>
-          <li><strong>Coaching & scheme fit</strong> — tenure, coordinator continuity, and historical postseason coaching performance.&nbsp;</li>
-          <li><strong>Economic & roster factors</strong> — salary-cap flexibility, contract cliff risks, draft capital and free-agent signings.</li>
-          <li><strong>Simulation</strong> — thousands of season Monte Carlo simulations mixing an ELO-like baseline with stochastic injury and variance components to produce team-level Super Bowl probabilities.</li>
-        </ul>
-
-        <p class="mt-4 text-xs text-gray-500">Notes: This is a probabilistic forecast made prior to the 2025 regular season. In-season events (trades, injuries, breakout rookies) will materially change these numbers.</p>
-      </article>
-
-      <aside class="bg-white rounded-xl shadow p-6">
-        <h4 class="text-lg font-semibold mb-3">Model Inputs (high level)</h4>
-        <ul class="text-sm text-gray-700 space-y-2">
-          <li>FiveThirtyEight / ELO-type ratings (trend baseline)</li>
-          <li>Pro-Football-Reference seasonal metrics (point differential, SRS)</li>
-          <li>PFF / NextGen and EPA/play for player impact</li>
-          <li>OverTheCap for cap & contract risk</li>
-        </ul>
-      </aside>
-    </section>
-
-    <!-- Performance Trends (2021-2025) -->
-    <section class="mt-8 bg-white rounded-xl shadow p-6">
-      <h3 class="text-xl font-semibold mb-4">Performance Trends: 2021–2025 — Who Stayed Strong?</h3>
-
-      <div class="grid md:grid-cols-3 gap-4">
-        <div class="rounded-lg border border-gray-100 p-4">
-          <h5 class="font-semibold">Consistent Contenders</h5>
-          <ul class="mt-2 text-sm text-gray-700 space-y-2">
-            <li><strong>Kansas City Chiefs</strong> — sustained offensive excellence and QB continuity.</li>
-            <li><strong>San Francisco 49ers</strong> — strong run game + defensive unit; scheme consistency under stable coaching.</li>
-            <li><strong>Buffalo Bills</strong> — elite QB play, heavy playoff presence (subject to cap/roster churn).</li>
-          </ul>
-        </div>
-
-        <div class="rounded-lg border border-gray-100 p-4">
-          <h5 class="font-semibold">Emerging / Resurgent Teams</h5>
-          <ul class="mt-2 text-sm text-gray-700 space-y-2">
-            <li><strong>Baltimore Ravens</strong> — MVP-level QB play at times; strong rushing attack.</li>
-            <li><strong>Cincinnati Bengals</strong> — top-tier passing offense when healthy.</li>
-            <li><strong>Philadelphia Eagles / Dallas Cowboys</strong> — potent offenses but variance driven by defensive consistency.</li>
-          </ul>
-        </div>
-
-        <div class="rounded-lg border border-gray-100 p-4">
-          <h5 class="font-semibold">Key Trend Indicators</h5>
-          <ol class="mt-2 text-sm text-gray-700 list-decimal list-inside space-y-2">
-            <li>Point differential correlates strongly with deep playoff runs.</li>
-            <li>Quarterback continuity explains the largest portion of team-level variance.</li>
-            <li>Coaching continuity matters — teams with stable OC/DC pairings tend to outperform expectations in playoffs.</li>
-          </ol>
-        </div>
-      </div>
-
-      <p class="mt-4 text-xs text-gray-500">Data references used in trend analysis: Pro-Football-Reference team pages and FiveThirtyEight NFL/ELO projections.</p>
-    </section>
-
-    <!-- Key Players & Impact -->
-    <section class="mt-8 bg-white rounded-xl shadow p-6">
-      <h3 class="text-xl font-semibold mb-4">Key Players & Impact (QBs and X-factors)</h3>
-
-      <div class="grid md:grid-cols-3 gap-4">
-        <div class="p-4 border rounded-lg">
-          <h6 class="font-semibold">Quarterback Tier (2021–2025)</h6>
-          <ul class="mt-2 text-sm text-gray-700 space-y-2">
-            <li><strong>Tier A:</strong> Patrick Mahomes, Josh Allen, Jalen Hurts — elite baseline value that strongly raises team Super Bowl odds.</li>
-            <li><strong>Tier B:</strong> Joe Burrow, Lamar Jackson — top-tier but variance (injury, supporting cast) matters.</li>
-            <li><strong>Tier C:</strong> Younger or transition QBs — greater upside but lower baseline probability.</li>
-          </ul>
-        </div>
-
-        <div class="p-4 border rounded-lg">
-          <h6 class="font-semibold">Non-QB Game-Changers</h6>
-          <ul class="mt-2 text-sm text-gray-700 space-y-2">
-            <li>Pass rush (sacks / pressure rate) and edge defenders drive playoff single-elimination outcomes.</li>
-            <li>Elite running-backs / offensive lines protect QBs and smooth out variance over a season.</li>
-            <li>Special teams & situational play (red-zone offense/defense) are high-leverage in playoff games.</li>
-          </ul>
-        </div>
-
-        <div class="p-4 border rounded-lg">
-          <h6 class="font-semibold">Injury & Age Risk</h6>
-          <p class="mt-2 text-sm text-gray-700">Teams with aging rosters or imminent contract cliffs (expensive cap hits) face higher volatility; depth at skill positions and young defensive talent reduce that risk.</p>
-        </div>
-      </div>
-
-      <p class="mt-4 text-xs text-gray-500">For QB and player metrics, see Pro-Football-Reference individual pages and PFF grading for play-level context: <a href="https://www.pro-football-reference.com/" class="text-cyan-600 underline">Pro-Football-Reference</a>, <a href="https://www.pff.com/" class="text-cyan-600 underline">PFF</a>.</p>
-    </section>
-
-    <!-- Predictive Probabilities with Charts -->
-    <section class="mt-8 bg-white rounded-xl shadow p-6">
-      <div class="flex items-start justify-between">
-        <div>
-          <h3 class="text-xl font-semibold mb-2">Model Probabilities — Who's Favored for Super Bowl 2026?</h3>
-          <p class="text-sm text-gray-700">Below are team probabilities from the model (pre-season baseline). These combine trend, player-impact, coaching stability and roster economics.</p>
-        </div>
-
-        <div class="text-sm text-gray-500">
-          <div>Baseline date: pre-2025 season</div>
-          <div class="mt-1">Model uncertainty: moderate — expect movement during the 2025 season</div>
-        </div>
-      </div>
-
-      <!-- Probability Data (table + charts) -->
-      <div class="mt-4 grid md:grid-cols-2 gap-6">
-        <div class="rounded-lg border p-4">
-          <table class="w-full text-sm table-auto">
-            <thead class="text-left text-xs text-gray-500">
-              <tr>
-                <th class="pb-2">Team</th>
-                <th class="pb-2">Probability</th>
-                <th class="pb-2">Badge</th>
-              </tr>
-            </thead>
-            <tbody class="align-top">
-              <tr class="border-t">
-                <td class="py-2 font-medium">Kansas City Chiefs</td>
-                <td class="py-2">18%</td>
-                <td class="py-2"><span class="inline-block px-2 py-1 text-xs bg-yellow-100 text-yellow-800 rounded">Mahomes era</span></td>
-              </tr>
-              <tr class="border-t">
-                <td class="py-2 font-medium">San Francisco 49ers</td>
-                <td class="py-2">15%</td>
-                <td class="py-2"><span class="inline-block px-2 py-1 text-xs bg-red-100 text-red-800 rounded">Strong defense</span></td>
-              </tr>
-              <tr class="border-t">
-                <td class="py-2 font-medium">Buffalo Bills</td>
-                <td class="py-2">13%</td>
-                <td class="py-2"><span class="inline-block px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded">Elite QB</span></td>
-              </tr>
-              <tr class="border-t">
-                <td class="py-2 font-medium">Philadelphia Eagles</td>
-                <td class="py-2">12%</td>
-                <td class="py-2"><span class="inline-block px-2 py-1 text-xs bg-emerald-100 text-emerald-800 rounded">High-offense</span></td>
-              </tr>
-              <tr class="border-t">
-                <td class="py-2 font-medium">Baltimore Ravens</td>
-                <td class="py-2">9%</td>
-                <td class="py-2"><span class="inline-block px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded">Rushing edge</span></td>
-              </tr>
-              <tr class="border-t">
-                <td class="py-2 font-medium">Cincinnati Bengals</td>
-                <td class="py-2">7%</td>
-                <td class="py-2"><span class="inline-block px-2 py-1 text-xs bg-pink-100 text-pink-800 rounded">Passing attack</span></td>
-              </tr>
-              <tr class="border-t">
-                <td class="py-2 font-medium">Miami Dolphins</td>
-                <td class="py-2">6%</td>
-                <td class="py-2"><span class="inline-block px-2 py-1 text-xs bg-cyan-100 text-cyan-800 rounded">Offensive upside</span></td>
-              </tr>
-              <tr class="border-t">
-                <td class="py-2 font-medium">Dallas Cowboys</td>
-                <td class="py-2">5%</td>
-                <td class="py-2"><span class="inline-block px-2 py-1 text-xs bg-slate-100 text-slate-800 rounded">Balanced roster</span></td>
-              </tr>
-              <tr class="border-t">
-                <td class="py-2 font-medium">Other teams (combined)</td>
-                <td class="py-2">15%</td>
-                <td class="py-2"><span class="inline-block px-2 py-1 text-xs bg-gray-100 text-gray-800 rounded">Long tail</span></td>
-              </tr>
-            </tbody>
-          </table>
-          <p class="mt-3 text-xs text-gray-500">Rounded probabilities — model includes tail risk for breakout teams.</p>
-        </div>
-
-        <!-- Charts: Bar chart and Donut chart as inline SVG (responsive) -->
-        <div class="rounded-lg border p-4">
-          <h4 class="font-semibold text-sm mb-3">Visual: Probability Bar Chart</h4>
-
-          <!-- Simple responsive SVG bar chart -->
-          <div class="w-full overflow-x-auto">
-            <svg viewBox="0 0 600 320" class="w-full h-56">
-              <!-- Background -->
-              <rect width="100%" height="100%" fill="#ffffff00"></rect>
-
-              <!-- Bars - compute approximate heights (scaled to 250px) -->
-              <!-- Team labels on left -->
-              <!-- Bars start at x=200 -->
-              <!-- Chiefs 18% -> height 180 -->
-              <!-- 49ers 15% -> 150 -->
-              <!-- Bills 13% -> 130 -->
-              <!-- Eagles 12% -> 120 -->
-              <!-- Ravens 9% -> 90 -->
-              <!-- Bengals 7% -> 70 -->
-              <!-- Dolphins 6% -> 60 -->
-              <!-- Cowboys 5% -> 50 -->
-              <!-- Others 15% -> 150 -->
-
-              <!-- Bars with colors -->
-              <g font-family="sans-serif" font-size="12">
-                <text x="10" y="40" fill="#111827">Kansas City Chiefs</text>
-                <rect x="200" y="40" width="350" height="22" rx="6" fill="#f59e0b" />
-                <text x="565" y="56" fill="#0f172a" font-weight="700">18%</text>
-
-                <text x="10" y="80" fill="#111827">San Francisco 49ers</text>
-                <rect x="200" y="66" width="300" height="22" rx="6" fill="#ef4444" />
-                <text x="565" y="82" fill="#0f172a" font-weight="700">15%</text>
-
-                <text x="10" y="120" fill="#111827">Buffalo Bills</text>
-                <rect x="200" y="102" width="260" height="22" rx="6" fill="#3b82f6" />
-                <text x="565" y="118" fill="#0f172a" font-weight="700">13%</text>
-
-                <text x="10" y="160" fill="#111827">Philadelphia Eagles</text>
-                <rect x="200" y="138" width="240" height="22" rx="6" fill="#10b981" />
-                <text x="565" y="154" fill="#0f172a" font-weight="700">12%</text>
-
-                <text x="10" y="200" fill="#111827">Baltimore Ravens</text>
-                <rect x="200" y="174" width="180" height="22" rx="6" fill="#7c3aed" />
-                <text x="565" y="190" fill="#0f172a" font-weight="700">9%</text>
-
-                <text x="10" y="240" fill="#111827">Cincinnati Bengals</text>
-                <rect x="200" y="210" width="140" height="22" rx="6" fill="#ec4899" />
-                <text x="565" y="226" fill="#0f172a" font-weight="700">7%</text>
-
-                <text x="10" y="280" fill="#111827">Miami Dolphins</text>
-                <rect x="200" y="246" width="120" height="22" rx="6" fill="#06b6d4" />
-                <text x="565" y="262" fill="#0f172a" font-weight="700">6%</text>
-              </g>
-            </svg>
-          </div>
-
-          <div class="mt-4">
-            <h4 class="font-semibold text-sm mb-2">Donut: Top 3 vs Rest</h4>
-            <svg viewBox="0 0 200 200" class="w-40 h-40 block mx-auto">
-              <!-- Donut centered -->
-              <!-- Top3 combined = Chiefs(18)+49ers(15)+Bills(13)=46 -->
-              <!-- Others = 54 -->
-              <!-- Compute angles -->
-              <!-- Top3 fraction 46/100 = 0.46 -> arc 165.6 degrees -->
-              <!-- We'll draw simple arcs with stroke-dasharray hack -->
-              <defs>
-                <linearGradient id="g1" x1="0" x2="1">
-                  <stop offset="0%" stop-color="#f59e0b"/>
-                  <stop offset="100%" stop-color="#ef4444"/>
-                </linearGradient>
-                <linearGradient id="g2" x1="0" x2="1">
-                  <stop offset="0%" stop-color="#3b82f6"/>
-                  <stop offset="100%" stop-color="#10b981"/>
-                </linearGradient>
-              </defs>
-
-              <circle cx="100" cy="100" r="70" fill="transparent" stroke="#eef2ff" stroke-width="30" />
-              <!-- Top3 arc -->
-              <circle cx="100" cy="100" r="70" fill="transparent" stroke="url(#g1)" stroke-width="30"
-                      stroke-dasharray="288.5 337.5" stroke-dashoffset="-72" stroke-linecap="round" transform="rotate(-90 100 100)"/>
-              <!-- Other arc -->
-              <circle cx="100" cy="100" r="70" fill="transparent" stroke="url(#g2)" stroke-width="30"
-                      stroke-dasharray="337.5 288.5" stroke-dashoffset="215.5" stroke-linecap="round" transform="rotate(-90 100 100)"/>
-
-              <text x="100" y="96" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a">Top 3</text>
-              <text x="100" y="116" text-anchor="middle" font-size="12" fill="#374151">46%</text>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Coaching & Front Office -->
-    <section class="mt-8 bg-white rounded-xl shadow p-6">
-      <h3 class="text-xl font-semibold mb-3">Coaching & Front Office — Why It Matters</h3>
-
-      <div class="grid md:grid-cols-2 gap-4">
-        <div>
-          <p class="text-sm text-gray-700 leading-relaxed">Coaching continuity (head coach + coordinators) strongly influences late-season execution and playoff performance. Teams with stable offensive systems and experienced playoff coaches tend to convert regular-season strength into deep postseason runs more reliably than teams with mid-cycle scheme changes.</p>
-        </div>
-
-        <div>
-          <p class="text-sm text-gray-700 leading-relaxed">Front-office decisions — draft capital management, cap flexibility, and the willingness to add mid-season reinforcements — change true championship probabilities. Over-the-cap contract cliffs and aging players concentrated at key positions are common structural risks.</p>
-        </div>
-      </div>
-
-      <p class="mt-4 text-xs text-gray-500">Examples & reporting sources: coaching moves and context are covered regularly by outlets like <a href="https://www.espn.com/nfl/" target="_blank" class="text-cyan-600 underline">ESPN</a>, <a href="https://theathletic.com/" target="_blank" class="text-cyan-600 underline">The Athletic</a>, and team press releases.</p>
-    </section>
-
-    <!-- Risk Factors & X-Factors -->
-    <section class="mt-8 bg-white rounded-xl shadow p-6">
-      <h3 class="text-xl font-semibold mb-3">Risk Factors & X-Factors (What Could Change 2026 Probabilities)</h3>
-
-      <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
-        <li><strong>Major QB injury</strong> — single biggest upside/downside swing for any contender.</li>
-        <li><strong>Mid-season trades</strong> — acquiring a top pass-rusher or WR can meaningfully shift odds.</li>
-        <li><strong>Rookie breakout</strong> — elite rookies at premium positions (edge, CB, WR) can swing single-elimination playoff games.</li>
-        <li><strong>Coaching turnover</strong> — in-season coordinator changes or HC firings often imply lower playoff odds.</li>
+    <!-- Financial & Segment Analysis Card -->
+    <div class="rounded-lg shadow-md border border-slate-200 hover:shadow-lg transition-transform duration-200 hover:-translate-y-1 p-6 bg-white">
+      <h2 class="text-2xl font-semibold tracking-wide">Financial & Segment Analysis</h2>
+      <h3 class="text-lg sm:text-xl font-semibold tracking-wide mt-3">Observed Trends</h3>
+      <ul class="text-sm text-gray-700 mt-2 list-disc ml-5 space-y-2">
+        <li>Advertising: Remains largest revenue contributor; search ad pricing trends and YouTube ad load/format changes are key drivers.</li>
+        <li>YouTube: Monetization improvements and Shorts strategies cited in filings and industry press — strategic focus for medium-term growth.</li>
+        <li>Google Cloud: Strong revenue growth trajectory; enterprise ARR momentum and competitive positioning (Gartner/IDC references) support valuation premium vs. legacy peers.</li>
+        <li>Other Bets & hardware: Loss-making or modest contribution; strategic R&D investments with long time horizons.</li>
       </ul>
 
-      <p class="mt-3 text-xs text-gray-500">The model incorporates generic injury probability tweaks; however, unpredictable single-event shocks (e.g., season-ending injuries, blockbuster trades) are captured only through scenario-based re-runs.</p>
-    </section>
+      <h3 class="text-lg sm:text-xl font-semibold tracking-wide mt-4">Capital Allocation</h3>
+      <p class="text-sm text-gray-700 mt-2">Search results highlighted a history of buybacks and meaningful free cash flow reinvestment. Management emphasizes both strategic M&A and returns; details captured in investor releases and 10-K disclosures.</p>
 
-    <!-- Conclusion & Recommendations -->
-    <section class="mt-8 bg-white rounded-xl shadow p-6">
-      <h3 class="text-xl font-semibold mb-3">Conclusion & How to Use This Report</h3>
-      <p class="text-sm text-gray-700 leading-relaxed">
-        Pre-season, the most probable outcome is that one of the established elite teams (listed above) captures the title, with the Kansas City Chiefs, San Francisco 49ers, and Buffalo Bills forming the highest-probability trio according to this model. That said, approximately half of the probability mass rests with other teams or season-level variance — meaning surprises are common in the NFL.
-      </p>
+      <hr class="my-4 border-slate-200" />
 
-      <div class="mt-4 grid md:grid-cols-3 gap-3">
-        <div class="rounded-lg border p-3">
-          <h6 class="font-semibold">For bettors</h6>
-          <p class="text-xs text-gray-600">Use the model probabilities to identify value relative to market odds; watch early-season injuries closely.</p>
-        </div>
-        <div class="rounded-lg border p-3">
-          <h6 class="font-semibold">For fans</h6>
-          <p class="text-xs text-gray-600">Track the health of top QBs and mid-season defensive additions — those matter most.</p>
-        </div>
-        <div class="rounded-lg border p-3">
-          <h6 class="font-semibold">For analysts</h6>
-          <p class="text-xs text-gray-600">Re-run the model weekly with updated ELO / EPA inputs for best in-season forecasts.</p>
-        </div>
+      <div class="border-l-4 border-amber-400 bg-amber-50 p-3 text-sm text-gray-700">
+        <strong class="font-semibold tracking-wide">Analyst note:</strong> For precise trend tables (5–10y) and segment-level CAGR, run the full data extraction from SEC filings and earnings releases.
       </div>
-    </section>
+    </div>
 
-    <!-- Sources (in-text natural citations with links) -->
-    <section class="mt-8 bg-white rounded-xl shadow p-6">
-      <h3 class="text-lg font-semibold mb-3">Sources & Further Reading</h3>
+    <!-- Valuation & DCF Scenarios Card -->
+    <div class="rounded-lg shadow-md border border-slate-200 hover:shadow-lg transition-transform duration-200 hover:-translate-y-1 p-6 bg-white">
+      <h2 class="text-2xl font-semibold tracking-wide">Valuation & Scenario Framework</h2>
+      <p class="text-sm text-gray-700 mt-3">Given the breadth of businesses, a scenario-driven DCF provides the best framework. Below are standardized assumptions to model high/base/low outcomes.</p>
 
-      <p class="text-sm text-gray-700">The analysis uses and references publicly available datasets and reporting:</p>
-      <ul class="mt-3 text-sm text-gray-700 space-y-2 list-disc list-inside">
-        <li><a href="https://www.pro-football-reference.com/" target="_blank" class="text-cyan-600 underline">Pro-Football-Reference</a> — team and player seasonal statistics, point differentials, playoff histories.</li>
-        <li><a href="https://projects.fivethirtyeight.com/nfl-predictions/" target="_blank" class="text-cyan-600 underline">FiveThirtyEight NFL & ELO-style projections</a> — ratings baseline and ELO methodology reference.</li>
-        <li><a href="https://www.pff.com/" target="_blank" class="text-cyan-600 underline">Pro Football Focus (PFF)</a> — player grades and advanced play-level metrics.</li>
-        <li><a href="https://overthecap.com/" target="_blank" class="text-cyan-600 underline">OverTheCap</a> — salary-cap and contract risk data.</li>
-        <li><a href="https://nextgenstats.nfl.com/" target="_blank" class="text-cyan-600 underline">NFL Next Gen Stats</a> — tracking-derived advanced metrics (pressure, separation, etc.).</li>
-        <li><a href="https://www.espn.com/nfl/" target="_blank" class="text-cyan-600 underline">ESPN</a> and <a href="https://theathletic.com/" target="_blank" class="text-cyan-600 underline">The Athletic</a> — reporting on coaching changes, injuries, and transaction news.</li>
+      <h3 class="text-lg sm:text-xl font-semibold tracking-wide mt-3">Proposed DCF Scenarios</h3>
+      <ol class="text-sm text-gray-700 ml-5 space-y-2">
+        <li><strong>High (AI Upside):</strong> Strong ad pricing + accelerated Cloud/AI monetization; terminal growth higher; lower WACC (~7%).</li>
+        <li><strong>Base:</strong> Moderate ad growth, steady Cloud expansion; WACC mid-range (~8.5–9%).</li>
+        <li><strong>Down / Stress:</strong> Advertising slowdown + regulatory fines/constraints; Cloud growth stalls; higher WACC (~11–12%).</li>
+      </ol>
+
+      <h3 class="text-lg sm:text-xl font-semibold tracking-wide mt-3">Sensitivity</h3>
+      <p class="text-sm text-gray-700 mt-2">Run sensitivity table across WACC (7–12%) and long-term revenue growth (2–6%) to capture valuation dispersion. The preliminary search suggests using those bands is reasonable for a tech platform with strong cash flows but regulatory risk.</p>
+
+      <hr class="my-4 border-slate-200" />
+
+      <div class="border-l-4 border-blue-500 bg-blue-50 p-3 text-sm text-gray-700">
+        <strong class="font-semibold tracking-wide">Deliverable note:</strong> I can produce a full DCF workbook with scenario outputs and sensitivity tables. Indicate whether to include peer comparable multiples (Microsoft, Meta, Amazon, NVIDIA).
+      </div>
+    </div>
+
+    <!-- Risks & Catalysts Card -->
+    <div class="rounded-lg shadow-md border border-slate-200 hover:shadow-lg transition-transform duration-200 hover:-translate-y-1 p-6 bg-white">
+      <h2 class="text-2xl font-semibold tracking-wide">Risks & Catalysts</h2>
+
+      <h3 class="text-lg sm:text-xl font-semibold tracking-wide mt-3">Upside Catalysts</h3>
+      <ul class="text-sm text-gray-700 mt-2 list-disc ml-5 space-y-2">
+        <li>Faster-than-expected monetization of AI features across Ads, Cloud, and Workspace.</li>
+        <li>Strong enterprise traction for Google Cloud, improving gross margins and operating leverage.</li>
+        <li>Product innovations in YouTube (short-form, subscriptions) that increase ARPU.</li>
       </ul>
 
-      <p class="mt-3 text-xs text-gray-500">Where possible, the model weights these inputs by recency and predictive power (e.g., point differential has higher weight than raw wins due to schedule noise).</p>
-    </section>
+      <h3 class="text-lg sm:text-xl font-semibold tracking-wide mt-3">Downside Risks</h3>
+      <ul class="text-sm text-gray-700 mt-2 list-disc ml-5 space-y-2">
+        <li>Regulatory actions in the U.S., EU, and other jurisdictions leading to fines, product changes, or structural remedies.</li>
+        <li>Ad market cyclicality and privacy/headwinds impacting targeting and CPMs.</li>
+        <li>Competitive pressure in cloud and AI from Microsoft, Amazon, and newer AI-first entrants.</li>
+      </ul>
 
-    <!-- Download / Print / Contact -->
-    <section class="mt-8 flex flex-col md:flex-row items-center justify-between gap-4 no-print">
-      <div>
-        <a class="inline-block bg-indigo-600 text-white px-4 py-2 rounded-lg shadow hover:bg-indigo-700 transition" href="#" onclick="window.print(); return false;">Print Report</a>
-        <a class="inline-block ml-3 bg-emerald-600 text-white px-4 py-2 rounded-lg shadow hover:bg-emerald-700 transition" href="#" download="superbowl_2026_report.html">Download HTML</a>
+      <hr class="my-4 border-slate-200" />
+
+      <blockquote class="border-l-4 border-indigo-500 bg-indigo-50 p-3 text-sm text-gray-700">
+        "Monitor regulatory developments and ads pricing closely — these are the primary drivers of short-term downside risk."
+      </blockquote>
+    </div>
+  </div>
+
+  <!-- Conclusion -->
+  <div class="mt-6 rounded-lg shadow-md border border-slate-200 hover:shadow-lg transition-transform duration-200 hover:-translate-y-1 p-6 bg-white">
+    <h2 class="text-2xl font-semibold tracking-wide">Conclusion & Next Steps</h2>
+    <p class="text-sm text-gray-700 mt-3">Alphabet presents a balanced risk/return profile: durable cash generation from advertising plus significant growth optionality in Cloud and AI. Short-term volatility driven by macro ad trends and regulation should be weighed against long-term secular opportunities.</p>
+
+    <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-3">
+      <div class="p-3 border-l-4 border-blue-500 bg-blue-50 text-sm text-gray-700">
+        Recommendation: <strong class="font-semibold tracking-wide">Constructive / Watch</strong> — proceed with DCF and peer multiple analysis before sizing.
       </div>
-
-      <div class="text-sm text-gray-600">
-        <div>Questions or data requests? Contact: <span class="font-medium text-gray-800">analytics@example.com</span></div>
-        <div class="mt-1 text-xs">This report is a pre-season probabilistic forecast — update after roster changes for best accuracy.</div>
+      <div class="p-3 border-l-4 border-green-500 bg-green-50 text-sm text-gray-700">
+        Next step: Request full report (6–12 pages) with sourced tables, charts, and DCF workbook.
       </div>
-    </section>
+      <div class="p-3 border-l-4 border-amber-400 bg-amber-50 text-sm text-gray-700">
+        Timeframe: Full report estimated 1–2 hours; model deliverable 2–3 hours (per preliminary note).
+      </div>
+    </div>
 
-    <footer class="mt-10 py-6 text-center text-xs text-gray-500">
-      © 2025 Data-Driven NFL Reports. Probabilities are model outputs and not guarantees.
-    </footer>
-  </main>
+    <hr class="my-4 border-slate-200" />
 
+    <div class="text-sm text-gray-700">
+      Sources (preliminary): Alphabet 10-K/10-Q and investor releases; Gartner/IDC cloud market reports; eMarketer/InsiderIntelligence ad-spend studies; major news coverage on regulatory developments. For full tables and exact figures, I will extract data directly from those documents on request.
+    </div>
+  </div>
+</div>
 </body>
 </html>

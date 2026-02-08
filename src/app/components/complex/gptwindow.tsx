@@ -31,7 +31,6 @@ export function GptWindow({ research_topic, researching, handleResearchFinished 
         )
       }
     }
-
     const {messages, sendMessage, status, error, stop, setMessages} = useChat({
         onError: handleResearchFinished,
         onFinish: returnResearchReport,
@@ -82,6 +81,7 @@ export function GptWindow({ research_topic, researching, handleResearchFinished 
                   <button onClick={printReport} className="px-4 py-2 bg-primary text-white rounded-lg shadow-md hover:bg-primary/90 transition">
                     Print Report
                   </button>
+                  
               </div>}
 
               {message.parts.map((part, index) => {
@@ -97,9 +97,9 @@ export function GptWindow({ research_topic, researching, handleResearchFinished 
                       return (
                         <div
                           key={`${message.id}-${index}`}
-                          className="prose max-w-none  mt-2  shadow-sm rounded-2xl p-4"
+                          className="prose max-w-none bg-white mt-2 shadow-sm p-4"
                           dangerouslySetInnerHTML={{ __html: sanitized }}
-                        />
+                        />                       
                       )
                     } else {
                       htmlDetected = false

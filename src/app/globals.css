@@ -205,3 +205,52 @@
     }
   }
 }
+
+/* ========================================
+   STANDARDIZED STYLING CONVENTIONS
+   For HTML Report Generation
+   ======================================== */
+
+:root {
+  /* COLOR PALETTE (Primary, Secondary, Accent) */
+  --report-primary-color: #4f46e5; /* Indigo */
+  --report-secondary-color: #64748b; /* Slate */
+  --report-accent-color: #f59e0b; /* Amber */
+  --report-gradient-indigo-to-purple: linear-gradient(to right, #4f46e5, #8b5cf6);
+  --report-gradient-green-to-teal: linear-gradient(to right, #10b981, #14b8a6);
+  --report-gradient-amber-to-orange: linear-gradient(to right, #f59e0b, #f97316);
+  
+  /* TEXT COLORS */
+  --report-text-light: #f1f5f9; /* Light text for dark backgrounds */
+  --report-text-dark: #1e293b; /* Dark text for light backgrounds */
+  --report-text-muted: #64748b; /* Muted text */
+  
+  /* SPACING STANDARDS */
+  --report-spacing-xs: 0.5rem;
+  --report-spacing-sm: 1rem;
+  --report-spacing-md: 1.5rem;
+  --report-spacing-lg: 2rem;
+  --report-spacing-xl: 2.5rem;
+  
+  /* BORDER RADIUS */
+  --report-radius-sm: 0.375rem;
+  --report-radius-md: 0.5rem;
+  --report-radius-lg: 0.75rem;
+  --report-radius-xl: 1rem;
+  
+  /* SHADOWS */
+  --report-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --report-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --report-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  
+  /* TYPOGRAPHY */
+  --report-font-family: 'Inter', 'Segoe UI', sans-serif;
+  --report-font-weight-normal: 400;
+  --report-font-weight-semibold: 600;
+  --report-font-weight-bold: 700;
+  --report-font-size-body: 0.875rem; /* text-sm */
+  --report-font-size-subheader: 1rem; /* text-lg */
+  --report-font-size-section: 1.25rem; /* text-xl */
+  --report-font-size-heading2: 1.5rem; /* text-2xl */
+  --report-font-size-heading1: 1.875rem; /* text-3xl */
+}
