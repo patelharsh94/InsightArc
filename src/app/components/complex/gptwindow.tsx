@@ -76,13 +76,13 @@ export function GptWindow({ research_topic, researching, handleResearchFinished 
                 {message.role === "user" ? "You:" : "AI:"}
               </div>
 
-              { status === 'ready' &&               
+              {/* { status === 'ready' &&               
               <div className="fixed top-4 right-4">
                   <button onClick={printReport} className="px-4 py-2 bg-primary text-white rounded-lg shadow-md hover:bg-primary/90 transition">
                     Print Report
                   </button>
                   
-              </div>}
+              </div>} */}
 
               {message.parts.map((part, index) => {
                 // console.log('Rendering part: ', index)
